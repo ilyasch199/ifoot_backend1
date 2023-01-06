@@ -72,7 +72,7 @@ public class PitchController {
       pitchService.delete(pitch);
   }
   
-  @GetMapping("/pitchowner/{id}")
+  @GetMapping("/pitchowner/{iduser}")
   public List<Pitch> pitchesbypitchowner(@PathVariable Long iduser) {
 	  User user = userService.findById(iduser);
 	  return pitchService.findpitchownerpitches(user);
